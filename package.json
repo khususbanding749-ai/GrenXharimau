@@ -1,5 +1,5 @@
 {
-  "name": "@poucode/baileys",
+  "name": "@GrenXharimau/baileys",
   "type": "module",
   "version": "1.0.0",
   "description": "A WebSockets library for interacting with WhatsApp Web \u2014 PouCode fork of Baileys",
@@ -12,13 +12,13 @@
     "wa-bot",
     "whatsapp bot"
   ],
-  "homepage": "https://github.com/pou-code/Baileys",
+  "homepage": "https://github.com/GrenXharimau/Baileys",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pou-code/Baileys.git"
+    "url": "git+https://github.com/GrenXharimau/Baileys.git"
   },
   "license": "MIT",
-  "author": "PouCode",
+  "author": "GrenXharimau",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
