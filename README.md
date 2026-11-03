@@ -2,7 +2,7 @@
 
 <p align="center">
 
-  <img src="https://files.catbox.moe/vxmarw.jpg" width="180" alt="Pou"/>
+  <img src="https://files.catbox.moe/vxmarw.jpg" width="180" alt="GrenXharimau"/>
 
 </p>
 
@@ -12,7 +12,7 @@
 [![GitHub](https://img.shields.io/badge/source-GitHub-black.svg)](https://github.com/pou-code/Baileys)
 [![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](package.json)
 
-A WebSockets library for interacting with WhatsApp Web, maintained under the **PouCode** brand.
+A WebSockets library for interacting with WhatsApp Web, maintained under the **GrenXharimau** brand.
 This project is a fork built on top of [Baileys](https://github.com/WhiskeySockets/Baileys) by WhiskeySockets.
 
 </div>
@@ -391,7 +391,7 @@ await client.statusMention(m.chat, {
 
 # Credits
 
-PouCode is a fork of [Baileys](https://github.com/WhiskeySockets/Baileys), originally created by
+GrenXharimau is a fork of [Baileys](https://github.com/WhiskeySockets/Baileys), originally created by
 [Adhiraj Singh](https://github.com/adiwajshing) and maintained by the WhiskeySockets community.
 All credit for the underlying protocol implementation goes to the original authors and contributors.
 See [LICENSE](LICENSE) for the full license text and copyright notices.
@@ -404,3 +404,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on reporting issues and su
 
 This is **not** an official WhatsApp product. Use of this library to send bulk or unsolicited messages
 may violate WhatsApp's Terms of Service and can result in your number being banned. Use responsibly.
+
+@GrenTzy1
