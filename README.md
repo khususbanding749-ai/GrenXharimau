@@ -1,11 +1,14 @@
-<div align='center'>PutraKelra</div>
+<div align="center">PutraKelra Baileys</div>
 
-<p align="center">  <img src="https://ganga--link--ghhzdp9sv8hk.code.run/i/3inwlvmo68.jpg" width="180" alt="PutraKelra"/></p><div align='center'>""License" (https://img.shields.io/badge/license-MIT-blue.svg)" (LICENSE)
+<p align="center">
+  <img src="https://ganga--link--ghhzdp9sv8hk.code.run/i/3inwlvmo68.jpg" width="180" alt="PutraKelra"/>
+</p><div align="center">""License" (https://img.shields.io/badge/license-MIT-blue.svg)" (LICENSE)
 ""GitHub" (https://img.shields.io/badge/source-GitHub-black.svg)" (https://github.com/okimego12/putrakelra)
 ""Node" (https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)" (package.json)
 
 A WebSockets library for interacting with WhatsApp Web, maintained under the PutraKelra brand.
-This project is a fork built on top of "Baileys" (https://github.com/WhiskeySockets/Baileys) by WhiskeySockets.
+
+This project is an independently maintained fork built on top of "Baileys" (https://github.com/WhiskeySockets/Baileys) by WhiskeySockets.
 
 </div>---
 
@@ -17,20 +20,21 @@ npm install github:okimego12/putrakelra
 
 Or add it to your "package.json" manually:
 
-"dependencies": {
-  "putrakelra-baileys": "github:okimego12/putrakelra"
+{
+  "dependencies": {
+    "putrakelra-baileys": "github:okimego12/putrakelra"
+  }
 }
 
-Already have a bot built on the original "@whiskeysockets/baileys" and don't want to change every
-"require"/"import" in your codebase? Alias the dependency name instead, so the original package
-name points to this fork:
+Already have a bot built on the original "@whiskeysockets/baileys" and don't want to change every "require"/"import" in your codebase? Alias the dependency name instead, so the original package name points to this fork:
 
-"dependencies": {
-  "@whiskeysockets/baileys": "github:okimego12/putrakelra"
+{
+  "dependencies": {
+    "@whiskeysockets/baileys": "github:okimego12/putrakelra"
+  }
 }
 
-With this alias, keep using "require('@whiskeysockets/baileys')" in your code as-is — npm will
-resolve it to this fork under the hood.
+With this alias, keep using "require('@whiskeysockets/baileys')" in your code as-is — npm will resolve it to this fork under the hood.
 
 You can also pin to a specific branch or commit:
 
@@ -86,34 +90,33 @@ const {
   default: makeWASocket,
   makeInMemoryStore
 } = require('putrakelra-baileys');
+
 const pino = require('pino');
 
 const store = makeInMemoryStore({
   logger: pino().child({ level: 'silent', stream: 'store' })
 });
+
 const client = makeWASocket({
   // options
 });
+
 store.bind(client.ev);
 
 client.ev.on('contacts.upsert', () => {
   console.log('New contact: ' + Object.values(store.contacts()));
 });
 
+---
+
 Sending Messages
 
 Send / relay a message with "noSelfSync"
 
-"noSelfSync" is a "relayMessage" option (private/1-on-1 chats only) that controls whether the
-message is also synced to your other own linked devices (other phones/WhatsApp Web sessions
-logged into the same account). It does not affect delivery to the recipient.
+"noSelfSync" is a "relayMessage" option (private/1-on-1 chats only) that controls whether the message is also synced to your other own linked devices (other phones/WhatsApp Web sessions logged into the same account). It does not affect delivery to the recipient.
 
-- "noSelfSync: true" — the message is sent to the recipient as normal, but is not synced
-  to your other own devices. Useful when you don't want a message to show up on your other
-  linked sessions (e.g. silent/automated sends from a bot account).
-- "noSelfSync: false" (default) — the message is sent to the recipient and also synced
-  to your other own devices, so it appears everywhere you're logged in, just like sending from
-  the official WhatsApp app.
+- "noSelfSync: true" — the message is sent to the recipient as normal, but is not synced to your other own devices. Useful when you don't want a message to show up on your other linked sessions (e.g. silent/automated sends from a bot account).
+- "noSelfSync: false" (default) — the message is sent to the recipient and also synced to your other own devices, so it appears everywhere you're logged in, just like sending from the official WhatsApp app.
 
 // Sent to the recipient, but NOT synced to your other devices
 await client.relayMessage(m.chat, {
@@ -225,6 +228,8 @@ await client.sendMessageMembers(m.chat, {
     text: "Hello members"
   }
 }, {});
+
+---
 
 Simple sendMessage Helpers
 
@@ -359,9 +364,10 @@ await client.statusMention(m.chat, {
 
 Credits
 
-PutraKelra is a fork of "Baileys" (https://github.com/WhiskeySockets/Baileys), originally created by
-"Adhiraj Singh" (https://github.com/adiwajshing) and maintained by the WhiskeySockets community.
+PutraKelra is a fork of "Baileys" (https://github.com/WhiskeySockets/Baileys), originally created by "Adhiraj Singh" (https://github.com/adiwajshing) and maintained by the WhiskeySockets community.
+
 All credit for the underlying protocol implementation goes to the original authors and contributors.
+
 See "LICENSE" (LICENSE) for the full license text and copyright notices.
 
 Contributing
@@ -370,5 +376,6 @@ See "CONTRIBUTING.md" (CONTRIBUTING.md) for guidelines on reporting issues and s
 
 Disclaimer
 
-This is not an official WhatsApp product. Use of this library to send bulk or unsolicited messages
-may violate WhatsApp's Terms of Service and can result in your number being banned. Use responsibly.
+This is not an official WhatsApp product. Use of this library to send bulk or unsolicited messages may violate WhatsApp's Terms of Service and can result in your number being banned.
+
+Use responsibly.
