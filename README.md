@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://ganga--link--ghhzdp9sv8hk.code.run/i/3inwlvmo68.jpg" width="180" alt="PutraKelra"/>
 </p><div align="center">""License" (https://img.shields.io/badge/license-MIT-blue.svg)" (LICENSE)
-""GitHub" (https://img.shields.io/badge/source-GitHub-black.svg)" (https://github.com/okimego12/putrakelra)
+""GitHub" (https://img.shields.io/badge/source-GitHub-black.svg)" (yshtxxbail)
 ""Node" (https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)" (package.json)
 
 A WebSockets library for interacting with WhatsApp Web, maintained under the PutraKelra brand.
